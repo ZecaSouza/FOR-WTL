@@ -1,6 +1,7 @@
 package com.Test_WTL.Test_WTL.entidades;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_")
@@ -12,6 +13,9 @@ public class CargoEntity extends AbstractEntity<Long>{
     @ManyToOne
     @JoinColumn(name = "id_departamento_fk")
     private DepartamentoEntity departamento;
+
+    @OneToMany(mappedBy = "cargo")
+    private List<FuncionarioEntity> funcionario;
 
     public String getNome() {
         return nome;
@@ -29,4 +33,11 @@ public class CargoEntity extends AbstractEntity<Long>{
         this.departamento = departamento;
     }
 
+    public List<FuncionarioEntity> getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(List<FuncionarioEntity> funcionario) {
+        this.funcionario = funcionario;
+    }
 }
