@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_")
+@Table(name = "tb_cargo")
 public class CargoEntity extends AbstractEntity<Long>{
 
     @Column(name = "nome", nullable = false, unique = true, length = 60)
