@@ -25,12 +25,12 @@
 	
 	<div  class="layout-main">
 		<aside>
-			<nav th:replace= "~{/fragments/sidebar :: nav-sidebar}">
+			<nav th:replace= "~{fragments/sidebar :: nav-sidebar}">
 				<span>menu</span>
 			</nav>
 		</aside>
 		
-		<section layouthth:fragment= "content">
+		<section layout:fragment= "content">
 			<div>		<div class="container">
 				<div id="list-home" class="row">
 					<div class="col-4">
@@ -118,7 +118,7 @@
 		</section>
 	</div>
 	
-	<footer th:replace="~{/fragments/footer :: rodape}">
+	<footer th:replace="~{fragments/footer :: rodape}">
 		<div>footer</div>
 	</footer>	
 	
