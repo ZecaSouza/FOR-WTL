@@ -4,10 +4,9 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity(name = "departamento")
+@Entity
 @Table(name = "departamento")
 public class DepartamentoEntity extends AbstractEntity<Long>{
-
 
     @Column(name = "nome", nullable = false, unique = true, length = 60)
     private String nome;
