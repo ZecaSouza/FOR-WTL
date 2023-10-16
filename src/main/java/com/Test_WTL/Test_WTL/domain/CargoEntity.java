@@ -1,17 +1,18 @@
-package com.Test_WTL.Test_WTL.entidades;
+package com.Test_WTL.Test_WTL.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name = "tb_cargo")
+@Entity(name = "cargo")
+@Table(name = "cargo")
 public class CargoEntity extends AbstractEntity<Long>{
+
 
     @Column(name = "nome", nullable = false, unique = true, length = 60)
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "id_departamento_fk")
+    @JoinColumn(name = "departamento_id_fk")
     private DepartamentoEntity departamento;
 
     @OneToMany(mappedBy = "cargo")

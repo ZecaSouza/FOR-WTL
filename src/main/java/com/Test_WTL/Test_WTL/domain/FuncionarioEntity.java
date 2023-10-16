@@ -1,12 +1,13 @@
-package com.Test_WTL.Test_WTL.entidades;
+package com.Test_WTL.Test_WTL.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Table(name = "tb_funcionario")
-@Entity
+@Table(name = "funcionario")
+@Entity(name = "funcionario")
 public class FuncionarioEntity extends AbstractEntity<Long>{
+
 
     @Column(name = "nome", nullable = false, unique = true)
     private String nome;

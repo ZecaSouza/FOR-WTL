@@ -1,6 +1,6 @@
 package com.Test_WTL.Test_WTL.service;
 
-import com.Test_WTL.Test_WTL.entidades.CargoEntity;
+import com.Test_WTL.Test_WTL.domain.CargoEntity;
 
 import java.util.List;
 

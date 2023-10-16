@@ -1,12 +1,13 @@
-package com.Test_WTL.Test_WTL.entidades;
+package com.Test_WTL.Test_WTL.domain;
 
 import com.Test_WTL.Test_WTL.ENUM.UF;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
-@Entity
-@Table(name = "tb_endereco")
+@Entity(name = "endereco")
+@Table(name = "endereco")
 public class EnderecoEntity extends AbstractEntity<Long>{
+
 
     @Column(nullable = false)
     private String logadouro;

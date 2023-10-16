@@ -3,14 +3,14 @@ package com.Test_WTL.Test_WTL.service;
 import java.util.List;
 
 import com.Test_WTL.Test_WTL.dao.DepartamentoDao;
-import com.Test_WTL.Test_WTL.entidades.DepartamentoEntity;
+import com.Test_WTL.Test_WTL.domain.DepartamentoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DepartamentoServiceImpl implements DepartamentoService {
-	
+
 	@Autowired
 	private DepartamentoDao dao;
 

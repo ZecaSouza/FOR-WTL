@@ -2,9 +2,10 @@ package com.Test_WTL.Test_WTL.dao;
 
 import java.util.List;
 
-import com.Test_WTL.Test_WTL.entidades.DepartamentoEntity;
+import com.Test_WTL.Test_WTL.domain.DepartamentoEntity;
 
 public interface DepartamentoDao {
+
 
     void save(DepartamentoEntity departamento);
 
