@@ -1,6 +1,6 @@
 package com.Test_WTL.Test_WTL.dao;
 
-import com.Test_WTL.Test_WTL.entidades.CargoEntity;
+import com.Test_WTL.Test_WTL.domain.CargoEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository

@@ -3,7 +3,7 @@ package com.Test_WTL.Test_WTL.service;
 import java.util.List;
 
 import com.Test_WTL.Test_WTL.dao.CargoDao;
-import com.Test_WTL.Test_WTL.entidades.CargoEntity;
+import com.Test_WTL.Test_WTL.domain.CargoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

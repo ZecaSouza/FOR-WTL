@@ -1,9 +1,6 @@
-package com.Test_WTL.Test_WTL.entidades;
+package com.Test_WTL.Test_WTL.domain;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 

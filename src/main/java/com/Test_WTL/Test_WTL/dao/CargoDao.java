@@ -2,7 +2,7 @@ package com.Test_WTL.Test_WTL.dao;
 
 import java.util.List;
 
-import com.Test_WTL.Test_WTL.entidades.CargoEntity;
+import com.Test_WTL.Test_WTL.domain.CargoEntity;
 
 public interface CargoDao {
 
