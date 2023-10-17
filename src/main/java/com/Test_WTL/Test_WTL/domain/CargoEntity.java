@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "cargo")
-public class CargoEntity extends AbstractEntity<Long>{
+public class CargoEntity extends AbstractEntity<Long> {
 
 
     @Column(name = "nome", nullable = false, unique = true, length = 60)
@@ -14,9 +14,6 @@ public class CargoEntity extends AbstractEntity<Long>{
     @ManyToOne
     @JoinColumn(name = "departamento_id_fk")
     private DepartamentoEntity departamento;
-
-    @OneToMany(mappedBy = "cargo")
-    private List<FuncionarioEntity> funcionario;
 
     public String getNome() {
         return nome;
@@ -33,12 +30,5 @@ public class CargoEntity extends AbstractEntity<Long>{
     public void setDepartamento(DepartamentoEntity departamento) {
         this.departamento = departamento;
     }
-
-    public List<FuncionarioEntity> getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(List<FuncionarioEntity> funcionario) {
-        this.funcionario = funcionario;
-    }
 }
+
