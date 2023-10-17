@@ -1,11 +1,10 @@
 Test_WTL
 
-Descrição
+Descrição:
 O projeto Test_WTL é uma aplicação Java baseada em Spring Boot que visa gerenciar departamentos e cargos de uma organização. Ele fornece recursos para criar, listar, atualizar e excluir departamentos e cargos. O projeto demonstra o uso de conceitos como Spring Boot, JPA (Java Persistence API), Hibernate, e segue uma arquitetura limpa e orientada a objetos.
 
 Tecnologias e Bibliotecas
 O projeto utiliza as seguintes tecnologias e bibliotecas:
-
 Java 17: A linguagem de programação base do projeto.
 Spring Boot: Um framework para criar aplicativos Java prontos para produção com facilidade.
 Spring Data JPA: Parte do ecossistema Spring, facilitando o acesso a bancos de dados relacionais.
@@ -13,7 +12,8 @@ Hibernate: Uma implementação do JPA usada para mapear objetos Java para tabela
 MySQL: O sistema de gerenciamento de banco de dados relacional utilizado no projeto.
 Thymeleaf: Um mecanismo de modelo para criar views web.
 Maven: Uma ferramenta de automação de compilação e gerenciamento de dependências.
-Arquitetura
+
+Arquitetura:
 O projeto segue uma arquitetura limpa (Clean Architecture) que busca isolar as camadas e responsabilidades, garantindo que o código seja altamente testável e flexível. As camadas do projeto incluem:
 
 Entidades (Entities): Classes de domínio que representam objetos reais, como Departamento e Cargo. As entidades estendem a classe abstrata AbstractEntity, que contém campos comuns como id.
