@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.Test_WTL.Test_WTL.TestWtlApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.369 s - in com.Test_WTL.Test_WTL.TestWtlApplicationTests
