@@ -2,11 +2,14 @@ package com.Test_WTL.Test_WTL.controllers;
 
 import com.Test_WTL.Test_WTL.domain.DepartamentoEntity;
 import com.Test_WTL.Test_WTL.service.DepartamentoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/departamentos")
@@ -28,8 +31,14 @@ public class DepartamentoController {
     }
 
     @PostMapping("/salvar")
-    public String salvar(@ModelAttribute("departamento") DepartamentoEntity departamento) {
+    public String salvar(@Valid DepartamentoEntity departamento, BindingResult result, RedirectAttributes attr) {
+
+        if (result.hasErrors()) {
+            return "departamento/cadastro";
+        }
+
         service.salvar(departamento);
+        attr.addFlashAttribute("success", "Departamento inserido com sucesso.");
         return "redirect:/departamentos/cadastrar";
     }
 
@@ -40,7 +49,12 @@ public class DepartamentoController {
     }
 
     @PostMapping("/editar")
-    public String editar(DepartamentoEntity departamento){
+    public String editar(@Valid BindingResult result,  DepartamentoEntity departamento){
+
+        if (result.hasErrors()) {
+            return "departamento/cadastro";
+        }
+
         service.editar(departamento);
         return "redirect:/departamentos/cadastrar";
     }
