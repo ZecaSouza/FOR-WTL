@@ -15,4 +15,6 @@ public interface DepartamentoService {
     DepartamentoEntity buscarPorId(Long id);
     
     List<DepartamentoEntity> buscarTodos();
+
+    boolean departamentoTemCargos(Long id);
 }
