@@ -134,15 +134,13 @@
 	    </section>
 
 	</div>
-	
-    <footer class="layout-footer">
-        <div class="container">
-			<span class="footer-copy">&copy; Teste WLT.</span>
-        </div>
-    </footer>	
 
-<!-- Bootstrap core JavaScript
-================================================== -->
+	<footer th:replace="~{fragments/footer :: rodape}">
+		<div>footer</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>

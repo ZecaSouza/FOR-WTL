@@ -4,6 +4,7 @@ import com.Test_WTL.Test_WTL.domain.CargoEntity;
 import com.Test_WTL.Test_WTL.domain.DepartamentoEntity;
 import com.Test_WTL.Test_WTL.service.CargoService;
 import com.Test_WTL.Test_WTL.service.DepartamentoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +37,12 @@ public class CargoController {
     }
 
     @PostMapping("/salvar")
-    public String salvar(CargoEntity cargo, RedirectAttributes attr) {
+    public String salvar(@Valid CargoEntity cargo, BindingResult result,  RedirectAttributes attr) {
+
+        if (result.hasErrors()) {
+            return "cargo/cadastro";
+        }
+
         cargoService.salvar(cargo);
         attr.addFlashAttribute("success", "Cargo inserido com sucesso.");
         return "redirect:/cargos/cadastrar";
@@ -49,7 +55,12 @@ public class CargoController {
     }
 
     @PostMapping("/editar")
-    public String editar(CargoEntity cargo, RedirectAttributes attr) {
+    public String editar(@Valid CargoEntity cargo, BindingResult result,  RedirectAttributes attr) {
+
+        if (result.hasErrors()) {
+            return "cargo/cadastro";
+        }
+
         cargoService.editar(cargo);
         attr.addFlashAttribute("success", "Registro atualizado com sucesso.");
         return "redirect:/cargos/cadastrar";

@@ -84,8 +84,22 @@
 	        </nav>
 	
 	        <div class="container" id="cadastro">
+
 				<form th:action="${departamento.id == null} ? @{/departamentos/salvar} : @{/departamentos/editar}"
 					  th:object="${departamento}" method="POST">
+
+					<div th:if="${#fields.hasAnyErrors()}" th:fragment="validacao">
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
+							<div th:each="error : ${#fields.detailedErrors()}">
+								<i class="oi oi-warning"></i>
+								<span th:text="${error.message}"></span>
+							</div>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					</div>
+
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Departamento</label>
@@ -97,18 +111,17 @@
 	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 	            </form>
 	        </div>
-	    </section>
+
+		</section>
 	
 	</div>
-	
-    <footer class="layout-footer">
-        <div class="container">
-			<span class="footer-copy">&copy; Teste WLT.</span>
-        </div>
-    </footer>	
 
-<!-- Bootstrap core JavaScript
-================================================== -->
+	<footer th:replace="~{fragments/footer :: rodape}">
+		<div>footer</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>

@@ -86,6 +86,20 @@
 	        <div class="container" id="cadastro">
 	            <form th:action="${cargo.id == null} ? @{/cargos/salvar} : @{/cargos/editar}"
 					  th:object="${cargo}" method="POST">
+
+
+					<div th:if="${#fields.hasAnyErrors()}" th:fragment="validacao">
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
+							<div th:each="error : ${#fields.detailedErrors()}">
+								<i class="oi oi-warning"></i>
+								<span th:text="${error.message}"></span>
+							</div>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					</div>
+
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Nome do Cargo</label>
@@ -105,7 +119,8 @@
 	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 	            </form>
 	        </div>
-	    </section>
+
+		</section>
 
 	</div>
 	

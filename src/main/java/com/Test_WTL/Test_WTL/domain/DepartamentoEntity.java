@@ -1,6 +1,8 @@
 package com.Test_WTL.Test_WTL.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
@@ -8,6 +10,8 @@ import java.util.List;
 @Table(name = "departamento")
 public class DepartamentoEntity extends AbstractEntity<Long>{
 
+    @NotBlank(message = "Informe um nome")
+    @Size(min = 3, max = 60, message = "O nome do departamento deve ter entre {min} e {max} caracteres.")
     @Column(name = "nome", nullable = false, unique = true, length = 60)
     private String nome;
 
