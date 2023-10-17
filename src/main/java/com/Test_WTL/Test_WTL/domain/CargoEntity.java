@@ -3,7 +3,7 @@ package com.Test_WTL.Test_WTL.domain;
 import jakarta.persistence.*;
 import java.util.List;
 
-@Entity(name = "cargo")
+@Entity
 @Table(name = "cargo")
 public class CargoEntity extends AbstractEntity<Long>{
 
